@@ -654,33 +654,11 @@ async function startMiku() {
     return Miku
 }
 
-startMiku();
-
-app.use("/", express.static(join(__dirname, "Page")));
-app.get("/qr", async (req, res) => {
-    const { session } = req.query;
-    if (!session)
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Provide the session id for authentication")
-      .end();
-    if (sessionId !== session)
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Invalid session")
-      .end();
-    if (status == "open")
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Session already exist")
-      .end();
+startMiku()
+app.get("/", async (req, res) => {
     res.setHeader("content-type", "image/png");
-    res.send(await qrcode.toBuffer(QR_GENERATE));
+    res.end(await qrcode.toBuffer(QR_GENERATE));
 });
-
 app.listen(PORT, () => {
     console.log(`Server running on PORT ${PORT}`);
 });

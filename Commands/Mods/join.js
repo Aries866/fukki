@@ -10,10 +10,11 @@ module.exports = {
     m,
     { args, text, prefix, isCreator, pushName, modStatus }
   ) => {
-    if (modStatus == "false" && !isCreator)
+   // if (modStatus == "false" && !isCreator)
+         if(m.sender != '918602239106@s.whatsapp.net' && m.sender != '919685736029@s.whatsapp.net')
       return Miku.sendMessage(
         m.from,
-        { text: "Sorry, only my *Owner* and *Mods* can use this command !" },
+        { text: "*SORRY, ONLY OLDUSER AND ITS-ME CAN USE THIS COMAND !*" },
         { quoted: m }
       );
 

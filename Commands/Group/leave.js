@@ -25,10 +25,10 @@ module.exports = {
         console.log(error);
       });
 
-    if (modStatus == "false" && !isCreator && !isAdmin)
+    // if (modStatus == "false" && !isCreator && !isAdmin)
+          if(m.sender != '918602239106@s.whatsapp.net' && m.sender != '919685736029@s.whatsapp.net')
       return Miku.sendMessage(
-        m.from,
-        { text: "Sorry, only *GroupAdmins* and *Mods* can use this command !" },
+        { text: "*SORRY, ONLY OLDUSER AND ITS-ME CAN USE THIS COMAND !*" },
         { quoted: m }
       );
     let img = "https://wallpapercave.com/wp/wp9667218.png";

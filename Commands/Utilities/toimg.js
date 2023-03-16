@@ -4,7 +4,7 @@ const fs = require("fs");
 
 module.exports = {
   name: "toimg",
-  alias: ["topic","topicture", "toimage"],
+  alias: ["stickertoimage", "toimage"],
   desc: "To get image from sticker",
   category: "Utilities",
   usage: "toimg <reply to non-animated sticker>",
