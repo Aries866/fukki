@@ -32,15 +32,15 @@
 require("dotenv").config();
 let gg = process.env.MODS;
 if (!gg) {
-  gg = "918101187835";   // You can Change this number //
+  gg = "918602239106";   // You can Change this number //
 }
 
 // -------------------------------------------------------------- //
 
 
 global.owner = gg.split(",");
-global.mongodb = process.env.MONGODB || "mongodb+srv://fantox:xrto71r@cluster0.dnlowts.mongodb.net/?retryWrites=true&w=majority";
-global.sessionId = process.env.SESSION_ID || "ok";
+global.mongodb = process.env.MONGODB || "mongodb+srv://bagof76690:5zgr3rGtA86b6Ijx@cluster0.c9trpt0.mongodb.net/?retryWrites=true&w=majority";
+global.sessionId = process.env.SESSION_ID || "okogvjmj018whqoko9jvvj";
 global.prefa = process.env.PREFIX || "-";
 global.tenorApiKey =
   process.env.TENOR_API_KEY || "AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c";
@@ -70,4 +70,3 @@ global.mess = {
   bangc: "This Group is *Banned* from using Commands!",
   nonsfw: "Dont be a pervert Baka! This is not a NSFW enabled group!",
 };
-

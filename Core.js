@@ -95,6 +95,7 @@ module.exports = async (Miku, m, commands, chatUpdate, store) => {
     global.suppL = "https://cutt.ly/AtlasBotSupport";
 
     const isCmd = body.startsWith(prefix);
+    const comnd = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
     const quoted = m.quoted ? m.quoted : m;
     const mime = (quoted.msg || m.msg).mimetype || " ";
     const isMedia = /image|video|sticker|audio/.test(mime);
@@ -566,6 +567,7 @@ module.exports = async (Miku, m, commands, chatUpdate, store) => {
       mime,
       isBotAdmin,
       prefix,
+      comnd,
       modStatus,
       NSFWstatus,
       isCreator,
